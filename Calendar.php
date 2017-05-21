@@ -1,4 +1,5 @@
 <?php
+//$_GET['year'] = 2017;
 function isLeapYear($year) {
     $result = false;
     if ($year < 1752) {
@@ -79,7 +80,7 @@ function decodeEnglishOfMonth($month) {
     }
 }
 if (isset($_GET['year'])) {
-    $year = $_GET['year'];
+//    $year = $_GET['year'];
 //    if (isset($_GET['btnPrevious'])) {
 //        $year--;
 //    }
@@ -108,9 +109,9 @@ if (isset($_GET['year'])) {
     <div class="row">
         <div class="col-sm-4">Calendar</div>
         <div class="col-sm-8">
-            <input type="submit" name="btnPrevious" value="<Previous" />
-            <input type="text" name = "year" value="<?php echo $year ?>" required />
-            <input type="submit" name="btnNext" value="Next>" />
+<!--            <input type="submit" name="btnPrevious" value="<Previous" />-->
+            <input type="text" name = "year" value="<?php echo $year ?>" placeholder="Please input year." required />
+<!--            <input type="submit" name="btnNext" value="Next>" />-->
         </div>
     </div>
     <?php
