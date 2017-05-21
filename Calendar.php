@@ -30,7 +30,6 @@ function getDaysOfMonth($year, $month) {
 }
 function getMonthDays($year, $month) {
     $isLeapYear = isLeapYear($year, $month);
-    $Days = getDaysOfMonth($year, $month);
     $Day = $isLeapYear?-1:0;
     switch($month) {
         case 1:
@@ -74,13 +73,13 @@ function decodeEnglishOfMonth($month) {
         case 7: return 'July';
         case 8: return 'August';
         case 9: return 'September';
-        case 10: return 'Octomer';
-        case 11: return 'Novermber';
+        case 10: return 'October';
+        case 11: return 'November';
         case 12: return 'December';
     }
 }
 if (isset($_GET['year'])) {
-//    $year = $_GET['year'];
+    $year = $_GET['year'];
 //    if (isset($_GET['btnPrevious'])) {
 //        $year--;
 //    }
@@ -110,7 +109,7 @@ if (isset($_GET['year'])) {
         <div class="col-sm-4">Calendar</div>
         <div class="col-sm-8">
 <!--            <input type="submit" name="btnPrevious" value="<Previous" />-->
-            <input type="text" name = "year" value="<?php echo $year ?>" placeholder="Please input year." required />
+            <input type="text" name = "year" value="<?php echo $year ?>" placeholder="Please input a year:" required />
 <!--            <input type="submit" name="btnNext" value="Next>" />-->
         </div>
     </div>
